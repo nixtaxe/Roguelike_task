@@ -7,32 +7,43 @@
 
 using namespace std;
 
-class Level {
+class Level
+{
 public:
-    Level();
+  Level();
 
-    void load(string fileName, Player &player);
+  void
+  load(string fileName, Player& player);
 
-    void print(Player &player);
+  void
+  print(Player& player);
 
-    void movePlayer(char input, Player &player);
+  void
+  movePlayer(char input, Player& player);
 
-    void updateEnemies(Player &player);
+  void
+  updateEnemies(Player& player);
 
-    //Getters
-    char getTile(int x, int y) { return _levelData[y][x]; };
+  //Getters
+  char
+  getTile(int x, int y)
+  { return _levelData[y][x]; };
 
-    //Setters
-    void setTile(int x, int y, char tile);
+  //Setters
+  void
+  setTile(int x, int y, char tile);
 
 private:
-    void processPlayerMove(Player &player, int targetX, int targetY);
+  void
+  processPlayerMove(Player& player, int targetX, int targetY);
 
-    void processEnemyMove(Player &player, int enemyIndex, int targetX, int targetY);
+  void
+  processEnemyMove(Player& player, int enemyIndex, int targetX, int targetY);
 
-    void battleMonster(Player &player, int targetX, int targetY);
+  void
+  battleMonster(Player& player, int targetX, int targetY);
 
 private:
-    vector<string> _levelData;
-    vector<Enemy> _enemies;
+  vector <string> _levelData;
+  vector <Enemy> _enemies;
 };

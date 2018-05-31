@@ -6,15 +6,18 @@
 
 using namespace std;
 
-class GameSystem {
+class GameSystem
+{
 public:
-    GameSystem(string levelFile);
+  GameSystem(string levelFile);
 
-    void playGame();
+  void
+  playGame();
 
-    void playerMove();
+  void
+  playerMove();
 
 private:
-    Level _level;
-    Player _player;
+  Level _level;
+  Player _player;
 };

@@ -1,42 +1,59 @@
 #pragma once
 
-class Player {
+class Player
+{
 public:
-    Player();
+  Player();
 
-    void init(int level, int health, int attack, int defense, int experience);
+  void
+  init(int level, int health, int attack, int defense, int experience);
 
-    int attack();
+  int
+  attack();
 
-    void addExperience(int xp);
+  void
+  addExperience(int xp);
 
-    int takeDamage(int attack);
+  int
+  takeDamage(int attack);
 
-    //Getters
-    void getPosition(int &x, int &y);
+  //Getters
+  void
+  getPosition(int& x, int& y);
 
-    int getLevel() { return _level; };
+  int
+  getLevel()
+  { return _level; };
 
-    int getHealth() { return _health; };
+  int
+  getHealth()
+  { return _health; };
 
-    int getAttack() { return _attack; };
+  int
+  getAttack()
+  { return _attack; };
 
-    int getDefense() { return _defense; };
+  int
+  getDefense()
+  { return _defense; };
 
-    int getExperience() { return _experience; };
+  int
+  getExperience()
+  { return _experience; };
 
-    //Setters
-    void setPosition(int x, int y);
+  //Setters
+  void
+  setPosition(int x, int y);
 
 private:
-    //Properties
-    int _level;
-    int _health;
-    int _attack;
-    int _defense;
-    int _experience;
+  //Properties
+  int _level;
+  int _health;
+  int _attack;
+  int _defense;
+  int _experience;
 
-    //Position
-    int _x;
-    int _y;
+  //Position
+  int _x;
+  int _y;
 };

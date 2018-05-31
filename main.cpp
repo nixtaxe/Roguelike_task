@@ -5,28 +5,33 @@
 #include "GameSystem.h"
 
 //using namespace std;
+//TODO set code style
 
-void initNcurses() {
-    initscr();
-    keypad(stdscr, TRUE);
-    resize_term(400, 600);
-    start_color();
-    noecho();
-    nonl();
+void
+initNcurses()
+{
+  initscr();
+  keypad( stdscr, TRUE );
+  resize_term( 400, 600 );
+  start_color();
+  noecho();
+  nonl();
 
-    clear();
-    refresh();
+  clear();
+  refresh();
 }
 
-int main() {
-    GameSystem gameSystem("level1.txt");
+int
+main()
+{
+  GameSystem gameSystem( "level1.txt" );
 
-    initNcurses();
+  initNcurses();
 
-    gameSystem.playGame();
-    endwin();
+  gameSystem.playGame();
+  endwin();
 
-    return 0;
+  return 0;
 }
 
 //mvprintw(...)
